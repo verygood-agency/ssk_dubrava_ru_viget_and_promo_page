@@ -1,0 +1,24 @@
+jQuery('body').on('click', '.callwg-toggle', function (e) {
+			e.preventDefault();
+			jQuery('.callwg-popup').toggleClass('formwg-active');
+			jQuery('.callwg-cover').toggleClass('callwg-active');
+		});
+
+jQuery(document).ready(function () {
+	    jQuery("#callback-wd").submit(function () {
+	        var formID = jQuery(this).attr('id');
+	        var formNm = jQuery('#' + formID);
+	        jQuery.ajax({
+	            type: "POST",
+	            url: '/callbackwidg/bitrix24-wg.php',
+	            data: formNm.serialize(),
+	            success: function (data) {
+	                jQuery(formNm).html(data); 
+	            },
+	            error: function (jqXHR, text, error) {
+	                jQuery(formNm).html(error);         
+	            }
+	        });
+	        return false;
+	    });
+	});

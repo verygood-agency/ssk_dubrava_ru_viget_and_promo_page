@@ -1,0 +1,341 @@
+
+//Наверх
+	$(document).ready(function(){   
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 300) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+	});
+// Ajax форма
+$(document).ready(function () {
+    $("#form-promo").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'mail.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+
+// Ajax форма
+$(document).ready(function () {
+    $("#akcia-strelba-iz-pist").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-actsia/bitrix24-actsia.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+// Ajax форма
+$(document).ready(function () {
+    $("#leave-modal-form").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-widget/bitrix24-leave.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+// Ajax форма
+$(document).ready(function () {
+    $("#form-other-uslug").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-other.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+// Ajax форма
+$(document).ready(function () {
+    $("#form-other-uslug-besedki").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/bitrix24-besedki.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+
+
+// Ajax форма
+$(document).ready(function () {
+    $("#den-rojdenia2").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/bitrix24-dr.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+// Ajax форма
+$(document).ready(function () {
+    $("#den-rojdenia3").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/bitrix24-dr.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+// Ajax форма
+$(document).ready(function () {
+    $("#den-rojdenia4").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/bitrix24-dr.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+
+
+
+// Ajax форма
+$(document).ready(function () {
+    $("#offer-1-form").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-other.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+
+// Ajax форма
+$(document).ready(function () {
+    $("#offer-2-form").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-other.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+// Ajax форма
+$(document).ready(function () {
+    $("#offer-3-form").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-other.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+// Ajax форма
+$(document).ready(function () {
+    $("#offer-4-form").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-other.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+// Ajax форма
+$(document).ready(function () {
+    $("#offer-5-form").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-other.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+// Ajax форма
+$(document).ready(function () {
+    $("#offer-6-form").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-other.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+// Ajax форма
+$(document).ready(function () {
+    $("#offer-7-form").submit(function () {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://ssk-dubrava.ru/mail-other.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
+
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        dots:false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout:5000,
+        animateOut: 'fadeOutDown',
+        animateIn: 'fadeInDown',
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
+});
+
+
