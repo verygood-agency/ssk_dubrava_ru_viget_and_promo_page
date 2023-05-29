@@ -1,22 +1,44 @@
+// font-family: "Golos Text", sans-serif;
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .pool-soon {
-  position: absolute;
+  box-sizing: border-box;
+  position: fixed;
   top: 50%;
   right: 10%;
   z-index: 9999;
-  // font-family: "Golos Text", sans-serif;
   font-family: "Rubik", sans-serif;
 
-  &__block {
-    // display: grid;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s, transform 1s;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    // grid-template-columns: 1fr;
-    // gap: 12px;
-    border-radius: 50%;
+    text-decoration: none !important;
     position: relative;
     z-index: 2;
-    width: 150px;
-    height: 150px;
-    margin: auto;
 
     &::before {
       content: "";
@@ -29,11 +51,36 @@
       background: linear-gradient(180deg, #48befc 0%, #4269f4 100%);
       box-shadow: 0px 4px 23px 5px rgba(15, 29, 52, 0.24);
       border-radius: 50%;
+      z-index: 0;
+      transition: all 0.4s;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      &::before {
+        top: -12px;
+        left: -12px;
+        right: -12px;
+        bottom: -12px;
+        background: linear-gradient(180deg, #7cd2ff 0%, #597bf3 100%);
+        box-shadow: 0px 4px 23px 5px rgba(15, 29, 52, 0.24);
+      }
     }
   }
+
   &__details {
     position: relative;
+    border: 2px solid #87e2ff;
+    width: 150px;
+    height: 150px;
     margin: auto;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
   }
   &__title {
     margin: 0;
@@ -45,11 +92,42 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
-
+    margin-bottom: 12px;
   }
   &__icon {
     display: block;
     min-width: 22px;
     width: 100%;
+  }
+
+  &__close-btn {
+    border-radius: 50%;
+    border: none;
+    width: 41px;
+    height: 41px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 22;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    transition: all 0.3s;
+    svg {
+      pointer-events: none;
+      path {
+        transition: all 0.6s;
+      }
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #ffffff;
+
+      svg {
+        path {
+          fill: #000000;
+        }
+      }
+    }
   }
 }
