@@ -113,3 +113,90 @@
 .pool-soon__close-btn:hover svg path, .pool-soon__close-btn:active svg path, .pool-soon__close-btn:focus svg path {
   fill: #000000;
 }
+
+.pool-promo {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2f6176;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+}
+.pool-promo .wrapper {
+  padding: 150px 76px 138px;
+}
+.pool-promo__logo {
+  max-width: 240px;
+  margin-bottom: 90px;
+}
+.pool-promo__logo img {
+  display: block;
+  width: 100%;
+}
+.pool-promo__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.23;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.pool-promo__subtitle {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 1.22;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 73px;
+  font-family: "Rubik", sans-serif;
+}
+.pool-promo__links {
+  display: grid;
+  gap: 91px;
+  grid-template-columns: 1fr 1fr;
+  max-width: max-content;
+  margin: 0 auto;
+  margin-bottom: 73px;
+}
+.pool-promo__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none !important;
+  display: grid;
+  gap: 12px;
+  align-items: center;
+  grid-template-columns: 34px auto;
+  text-align: left;
+}
+.pool-promo__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  margin: 0 auto;
+  background: #2aabee;
+  border-radius: 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  height: 52px;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  padding: 14px 20px;
+}
