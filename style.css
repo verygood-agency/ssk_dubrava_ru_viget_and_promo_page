@@ -1,0 +1,48 @@
+.pool-soon {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  z-index: 9999;
+  font-family: "Rubik", sans-serif;
+}
+.pool-soon__block {
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+.pool-soon__block::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: linear-gradient(180deg, #48befc 0%, #4269f4 100%);
+  box-shadow: 0px 4px 23px 5px rgba(15, 29, 52, 0.24);
+  border-radius: 50%;
+}
+.pool-soon__details {
+  position: relative;
+  margin: auto;
+}
+.pool-soon__title {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.pool-soon__icon {
+  display: block;
+  min-width: 22px;
+  width: 100%;
+}
